@@ -1,0 +1,30 @@
+[submodule "1-your-first-proof/lib/forge-std"]
+	path = 1-your-first-proof/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "1-your-first-proof/lib/kontrol-cheatcodes"]
+	path = 1-your-first-proof/lib/kontrol-cheatcodes
+	url = https://github.com/runtimeverification/kontrol-cheatcodes
+[submodule "2-when-fuzzing-fails/lib/forge-std"]
+	path = 2-when-fuzzing-fails/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "2-when-fuzzing-fails/lib/kontrol-cheatcodes"]
+	path = 2-when-fuzzing-fails/lib/kontrol-cheatcodes
+	url = https://github.com/runtimeverification/kontrol-cheatcodes
+[submodule "3-proof-debugging/lib/forge-std"]
+	path = 3-proof-debugging/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "3-proof-debugging/lib/kontrol-cheatcodes"]
+	path = 3-proof-debugging/lib/kontrol-cheatcodes
+	url = https://github.com/runtimeverification/kontrol-cheatcodes
+[submodule "4-external-computation/lib/forge-std"]
+	path = 4-external-computation/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "4-external-computation/lib/kontrol-cheatcodes"]
+	path = 4-external-computation/lib/kontrol-cheatcodes
+	url = https://github.com/runtimeverification/kontrol-cheatcodes
+[submodule "5-compositional-symbolic-execution/lib/forge-std"]
+	path = 5-compositional-symbolic-execution/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "5-compositional-symbolic-execution/lib/kontrol-cheatcodes"]
+	path = 5-compositional-symbolic-execution/lib/kontrol-cheatcodes
+	url = https://github.com/runtimeverification/kontrol-cheatcodes
