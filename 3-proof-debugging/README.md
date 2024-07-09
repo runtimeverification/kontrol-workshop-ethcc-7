@@ -20,7 +20,7 @@ As an example of proof development we're going to verify the Solady `mulWad` fun
 
 Let's specify how `mulWad` should behave. Executing `mulWad(x, y)` should perform a rounded-down fixed-point multiplication of `x` and `y` with the first 18 digits treated as decimal. This is captured by the formula `(x * y)/WAD` where `WAD=1e18`.
 
-That is for the case wehre `x * y` doesn't overflow. In the case `x * y > types(uint256).max`, `mulWad(x, y)` should revert. This is captured by the following test:
+That is for the case where `x * y` doesn't overflow. In the case `x * y > types(uint256).max`, `mulWad(x, y)` should revert. This is captured by the following test:
 
 ```solidity
 function testMulWad(uint256 x, uint256 y) public {
@@ -54,7 +54,7 @@ kontrol prove --mt testMulWad
 
 ### Trouble in paradise
 
-If you've successfully executed the above steps, you've also have been "greeted" by the following message
+If you've successfully executed the above steps, you also have been "greeted" by the following message
 ```
 ❌ PROOF FAILED ❌ test%MulWadTest.testMulWad(uint256,uint256):0
 ```
@@ -138,7 +138,7 @@ if mul(y, gt(x, div(not(0), y)))
 
 Thus, the branch that starts with node `13` evaluates to `0` the condition of the `if` statement, whereas the branch starting with node `14` evaluates the condition to `!= 0`, entering the branch and reverting.
 
-But if Kontrol gave us `x = maxUInt256` and `y = 1` as a counterexample, how is it possible that the condition in the `mul(y, gt(x, div(not(0), y)))` is evaluated to something different than `0`? Something is off here. Let's look at thesome of the constraints of the node leading to the branch, node `11`, that concern to `x` and `y`:
+But if Kontrol gave us `x = maxUInt256` and `y = 1` as a counterexample, how is it possible that the condition in the `mul(y, gt(x, div(not(0), y)))` is evaluated to something different than `0`? Something is off here. Let's look at some of the constraints of the node leading to the branch, node `11`, that concern to `x` and `y`:
 ```
 { true #Equals 0 <=Int VV0_x_114b9705:Int }
 { true #Equals 0 <=Int VV1_y_114b9705:Int }
