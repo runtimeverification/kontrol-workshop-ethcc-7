@@ -3,7 +3,7 @@ ETHCC[7] Kontrol Workshop
 
 In this repo you'll find all the examples treated at the ETHCC[7] Kontrol workshop with detailed instructions.
 
-You can also step through the [presentation](./Presentation ETHCC[7].pdf).
+You can also step through the [presentation](./Presentation-ETHCC7.pdf).
 
 ## Getting Kontrol
 
