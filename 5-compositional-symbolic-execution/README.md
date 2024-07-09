@@ -7,7 +7,7 @@ When the same function is called multiple times, all its execution paths are ana
 In this example, we take a basic ERC20 token mock.
 In [src/GLDToken.sol](src/GLDToken.sol) we define the contract, and the tests are under [tests/GLDToken.t.sol](tests/GLDToken.t.sol).
 For this workshop, we did not add the initial supply or the option to mint tokens.
-The reason for this is that the we want to make use of the `kevm.symbolicStorage(address)` cheat code, changing the storage of the contract to a symbolic, abstract storage.
+The reason for this is that we want to make use of the `kevm.symbolicStorage(address)` cheat code, changing the storage of the contract to a symbolic, abstract storage.
 With this, we can assume anything about the storage.
 Any preconditions we need to make storage more constrained can be added with `vm.assume(bool)`. Otherwise, storage variables accessed during the execution will have a symbolic, abstract value.
 
@@ -17,7 +17,7 @@ You can notice that the test contract has a few auxiliary functions:
     - `unchangedStorage(bytes32)` - With the help of this modifier, we can ensure that the storage does not change for any given storage slot by comparing the storage slot value before and after executing the test.
 
 
-#### Symbolic exploration of a Solidity funciton
+#### Symbolic exploration of a Solidity function
 
 Running `kontrol prove --match-test Contract.functionName --cse` on a function that does not have a prefix like `test`, `proof`, `check` will result in a symbolic exploration of that function.
 The function will be executed symbolically, in a similar way to how a test function would be executed.
