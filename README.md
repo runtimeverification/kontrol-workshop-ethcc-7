@@ -59,17 +59,17 @@ How does an example of something that might not be catched by a fuzz test, but i
 
 #### 3. [Proof Debugging](./3-proof-debugging)
 
-The last step to becomming more comfortable with Kontrol is to learn how to debug a proof. Not all failed proofs mean that there's a bug in the code. Through this example we show a way of discerning why can a proof fail and how to correctly address it. The function under verification is Solady's `mulWad`.
+The last step to becoming more comfortable with Kontrol is to learn how to debug a proof. Not all failed proofs mean that there's a bug in the code. Through this example we show a way of discerning why can a proof fail and how to correctly address it. The function under verification is Solady's `mulWad`.
 
-If you're running the examples with the docker image, in this example we have one extra Foundry profile called `lemmas` that will succesfully run the `mulWad` specs, whereas the regular foundry profile will not.
+If you're running the examples with the docker image, in this example we have one extra Foundry profile called `lemmas` that will successfully run the `mulWad` specs, whereas the regular foundry profile will not.
 
 ### Kontrol On Roids
 
-What follows is the most recent improvements we have made to Kontrol, allowing you to take its usage to the next level.
+What follows are the most recent improvements we have made to Kontrol, allowing you to take its usage to the next level.
 
 #### 4. [External Computation](./4-external-computation)
 
-Kontrol is both time and resource intensive, but here's a way of saving an arbitrary amount of time when executing a proof in Kontrol. This example instrucs on how to offload the initial part of your proof computation to Foundry (which is blazing fast) and then incorporate it into a Kontrol proof. Pretty neat!
+Kontrol is both time and resource intensive, but here's a way of saving an arbitrary amount of time when executing a proof in Kontrol. This example instructs on how to offload the initial part of your proof computation to Foundry (which is blazing fast) and then incorporate it into a Kontrol proof. Pretty neat!
 
 #### 5. [Compositional Symbolic Execution (CSE)](5-compositional-symbolic-execution)
 
