@@ -91,9 +91,9 @@ So far, we have deployed `10` `Counter` contracts, set `number` to `n-1`, and de
 
 #### 1. Generate helper contracts with Kontrol
 
-The very first step is to convert the JSON files produced above into a Solidity contract that we can use. We'll use the Kontrol feature `load-state-diff` to save the necessary helper contracts to `test/RecordedState.sol`:
+The very first step is to convert the JSON files produced above into a Solidity contract that we can use. We'll use the Kontrol feature `load-state` to save the necessary helper contracts to `test/RecordedState.sol`:
 ```
-kontrol load-state-diff RecordedState state-dump/StateDump.json --contract-names state-dump/AddressNames.json --output-dir test
+kontrol load-state RecordedState state-dump/StateDump.json --contract-names state-dump/AddressNames.json --output-dir test
 ```
 Executing this command will create the files [`test/RecordedState.sol`](test/RecordedState.sol) and [`test/RecordedStateCode.sol`](test/RecordedStateCode.sol). The last one only contains the code of the addresses. The first one, `RecordedStates.sol`, consists of two parts: naming the addresses as provided by the `AddressNames.json` file,
 ```solidity
