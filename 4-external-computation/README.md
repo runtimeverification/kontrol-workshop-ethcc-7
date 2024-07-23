@@ -16,7 +16,7 @@ In this example we've used the file [`state-dump/StateDump.json`](./state-dump/S
 
 #### 2. Give Foundry permissions to write to the file
 
-This is done by adding the follwing lines to the `foundry.toml` file. Note that we've selected the entire `state-dump` folder.
+This is done by adding the following lines to the `foundry.toml` file. Note that we've selected the entire `state-dump` folder.
 ```toml
 fs_permissions = [
   { access="read-write", path="state-dump" }
@@ -43,7 +43,7 @@ To run this function with Foundry we recommend using `forge script` since it can
 ```
 forge script src/ExternalComputation.sol:ExternalComputation --sig severalCountersDump
 ```
-This will produce a [JSON](./state-dump/StateDump.json) where each entry is an address indicating it's state:
+This will produce a [JSON](./state-dump/StateDump.json) where each entry is an address indicating its state:
 ```json
   "0x2e234dae75c793f67a35089c9d99245e1c58470b": {
     "nonce": "0x1",
